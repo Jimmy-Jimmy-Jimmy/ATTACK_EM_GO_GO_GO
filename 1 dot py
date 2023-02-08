@@ -1,0 +1,42 @@
+# FILE 1.PY
+#jimmy_jimmy_jimmy
+
+
+import tkinter as tk
+import subprocess
+
+def trigger_2():
+    subprocess.run(["python3", "/home/kali/Attackem/2.py"])
+
+def trigger_3():
+    subprocess.run(["python3", "/home/kali/Attackem/3.py"])
+
+def trigger_4():
+    subprocess.run(["python3", "/home/kali/Attackem/4.py"])
+
+def trigger_5():
+    subprocess.run(["python3", "/home/kali/Attackem/5.py"])
+
+def trigger_6():
+    subprocess.run(["python3", "/home/kali/Attackem/6.py"])
+
+root = tk.Tk()
+root.title("Attack Em GUI")
+root.geometry("400x400") # set the size of the GUI window
+
+header = tk.Label(root, text="ATTACK-EM", font=("Helvetica", 24), padx=20, pady=20)
+header.pack()
+
+button1 = tk.Button(root, text="Start WireShark", command=trigger_2, padx=20, pady=20)
+button2 = tk.Button(root, text="Start NMAP", command=trigger_3, padx=20, pady=20)
+button3 = tk.Button(root, text="Start MSFConsole", command=trigger_4, padx=20, pady=20)
+button4 = tk.Button(root, text="Phase 2 ?", command=trigger_5, padx=20, pady=20)
+button5 = tk.Button(root, text="Deliver Payload", command=trigger_6, padx=20, pady=20)
+
+button1.pack()
+button2.pack()
+button3.pack()
+button4.pack()
+button5.pack()
+
+root.mainloop()
